@@ -35,3 +35,9 @@ $ git clone https://github.com/arpit73/dotfiles-configs.git
 <p align="center">
   <img src="https://github.com/arpit73/dotfiles-configs/blob/master/src/vscode.png" alt="A moon shaped pool">
 </p>
+
+<p align="center">
+  <img src="https://github.com/arpit73/dotfiles-configs/blob/master/src/browser.png" alt="A 
+moon sha$
+</p>
+
