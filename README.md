@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/arpit73/dotfiles-configs/blob/master/src/astro.jpg" alt="astro" width="400">
+  <img src="https://github.com/arpit73/dotfiles-configs/blob/master/src/astro.jpg" alt="astro" max-width="500">
 </p>
 
 # introduction
@@ -11,10 +11,10 @@ Dotfiles are used to customize your system. The “dotfiles” name is derived f
 <br>
 <br>
 
-## clone dotfiles
+## Clone dotfiles
 
-install first git
-then open ur terminal, enter command
+first install git
+then open your terminal, enter command
 
 ```
 $ git clone https://github.com/arpit73/dotfiles-configs.git
@@ -23,7 +23,7 @@ $ git clone https://github.com/arpit73/dotfiles-configs.git
 <br>
 <br>
 
-## Screenshot
+## Screenshots
 
 <p align="center">
   <img src="https://github.com/arpit73/dotfiles-configs/blob/master/src/neofetch.png" alt="kid A">
