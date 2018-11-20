@@ -37,7 +37,7 @@ $ git clone https://github.com/arpit73/dotfiles-configs.git
 </p>
 
 <p align="center">
-  <img src="https://github.com/arpit73/dotfiles-configs/blob/master/src/browser.png" alt="A 
-moon sha$
+  <img src="https://github.com/arpit73/dotfiles-configs/blob/master/src/browser.png" alt="I 
+Rainbows">$
 </p>
 
