@@ -1,8 +1,8 @@
-<p align="center">
-  <img src="https://github.com/arpit73/dotfiles-configs/blob/master/src/astro.jpg" alt="astro" max-width="500">
+<p style="font-size:2em; color:linear-gradient(red, yellow); text-align: center;">
+▌│█║▌║▌║ ⓓⓞⓣⓕⓘⓛⓔⓢ ║▌║▌║█│▌
 </p>
-
-# Introduction
+                                         
+## Introduction
 
 Dotfiles are used to customize your system. The “dotfiles” name is derived from the configuration files in Unix-like systems that start with a dot (e.g. .bashrc and .gitconfig). For normal users, this indicates these are not regular documents, and by default are hidden in directory listings. For power users, however, they are a core tool belt!
 <br>
@@ -10,7 +10,7 @@ Dotfiles are used to customize your system. The “dotfiles” name is derived f
 <br>
 <br>
 
-## Clone dotfiles
+### Clone dotfiles
 
 First install git
 then open your terminal, enter command
@@ -22,7 +22,7 @@ $ git clone https://github.com/arpit73/dotfiles-configs.git
 <br>
 <br>
 
-## Screenshots
+### Screenshots
 
 <p align="center">
   <img src="https://github.com/arpit73/dotfiles-configs/blob/master/src/neofetch.png" alt="kid A">
