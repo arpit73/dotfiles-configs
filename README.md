@@ -1,4 +1,4 @@
-<p style="font-size:2em; color:linear-gradient(red, yellow); text-align: center;">
+<p style="font-size:25px; color:red; text-align: center;">
 ▌│█║▌║▌║ ⓓⓞⓣⓕⓘⓛⓔⓢ ║▌║▌║█│▌
 </p>
                                          
