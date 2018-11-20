@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.imgur.com/JLnQgvx.png" alt="its Vignette!" width="400" height="400">
+  <img src="https://github.com/arpit73/dotfiles-configs/blob/master/src/astro.jpg" alt="its Vignette!" width="400" height="400">
 </p>
 
 # introduction
