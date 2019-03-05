@@ -132,7 +132,6 @@ alias gac="git add .
 git commit -m $1"
 alias gp="git push origin master"
 
-alias goff="sudo rmod nvidia_uvm
 sudo rmod nvdia
 sudo tee /proc/acpi/bbswitch <<< OFF
 "
