@@ -1,23 +1,24 @@
 {
-    "workbench.colorTheme": "Ayu Dark",
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "One Dark Pro Bold",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.statusBar.visible": true,
     "window.menuBarVisibility": "toggle",
-    "editor.fontFamily": " 'fira code' ",
+    "editor.fontFamily": " 'Fira Code iScript' ",
     "editor.fontLigatures": true,
     "terminal.integrated.fontFamily": "fira code",
-    "editor.fontSize": 16,
+    "editor.fontSize": 15,
     "terminal.integrated.fontSize": 16,
     "html.format.indentInnerHtml": true,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 2000,
     "window.zoomLevel": 0,
-    "code-runner.runInTerminal": true,
-    "bracketPairColorizer.timeOut": 0,
     "prettier.singleQuote": true,
     "prettier.tabWidth": 4,
     "files.associations": {
-        "*.js": "javascript"
+        "*.js": "javascript",
+        "*.jsx": "javascriptreact",
+        "*.jsm": "javascript",
+        "*.build": "python"
     },
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#7CB342",
@@ -46,11 +47,48 @@
     "markdown-preview-enhanced.liveUpdate": true,
     "liveServer.settings.donotShowInfoMsg": true,
     "material-icon-theme.folders.theme": "specific",
-    "cSpell.userWords": ["repos"],
+    "cSpell.userWords": [
+        "DAFSA",
+        "getenv",
+        "kinto",
+        "netwerk",
+        "noqa",
+        "nsifile",
+        "repos",
+        "tlds",
+        "xpcshell",
+        "xpcshelltest"
+    ],
     "python.pythonPath": "/opt/anaconda/bin",
-    "latex-workshop.view.pdf.viewer": "tab",
     "terminal.integrated.rendererType": "canvas",
     "terminal.integrated.splitCwd": "workspaceRoot",
-    "javascript.updateImportsOnFileMove.enabled": "always"
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "window.titleBarStyle": "custom",
+    "editor.renderWhitespace": "all",
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "eslint.alwaysShowStatus": true,
+    // "eslint.nodePath": "/home/arpit/Development/moz/mozilla-central/node_modules/.bin/eslint",
+    "eslint.options": {
+        "configFile": "/home/arpit/Development/moz/mozilla-central/.eslintrc.js",
+    },
+    "prettier.eslintIntegration": true,
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }",
+    "C_Cpp.updateChannel": "Insiders",
+    "workbench.settings.editor": "json",
+    "workbench.settings.useSplitJSON": true,
 }
-
