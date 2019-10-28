@@ -1,13 +1,12 @@
 {
-    "workbench.colorTheme": "Material Theme Darker",
+    "workbench.colorTheme": "One Dark Pro Bold",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.statusBar.visible": true,
     "window.menuBarVisibility": "toggle",
     "editor.fontFamily": " 'Fira Code iScript' ",
     "editor.fontLigatures": true,
-    "terminal.integrated.fontFamily": "fira code",
     "editor.fontSize": 15,
-    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontSize": 14,
     "html.format.indentInnerHtml": true,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 2000,
@@ -49,6 +48,8 @@
     "material-icon-theme.folders.theme": "specific",
     "cSpell.userWords": [
         "DAFSA",
+        "arpit",
+        "bharti",
         "getenv",
         "kinto",
         "netwerk",
@@ -59,7 +60,7 @@
         "xpcshell",
         "xpcshelltest"
     ],
-    "python.pythonPath": "/opt/anaconda/bin",
+    "python.pythonPath": "/usr/bin/python3.6",
     "terminal.integrated.rendererType": "canvas",
     "terminal.integrated.splitCwd": "workspaceRoot",
     "javascript.updateImportsOnFileMove.enabled": "always",
@@ -81,7 +82,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "eslint.alwaysShowStatus": true,
-    // "eslint.nodePath": "/home/arpit/Development/moz/mozilla-central/node_modules/.bin/eslint",
     "eslint.options": {
         "configFile": "/home/arpit/Development/moz/mozilla-central/.eslintrc.js",
     },
@@ -91,4 +91,7 @@
     "C_Cpp.updateChannel": "Insiders",
     "workbench.settings.editor": "json",
     "workbench.settings.useSplitJSON": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    }
 }
