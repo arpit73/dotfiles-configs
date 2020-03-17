@@ -1,46 +1,15 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/arpit/.oh-my-zsh"
+  export ZSH="/home/arpit/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_MODE="nerdfont-complete"
+ZSH_THEME="robbyrussell"
 
-
-#DISABLE_AUTO_TITLE="true"
-
-POWERLEVEL9K_BATTERY_CHARGING='yellow'
-POWERLEVEL9K_BATTERY_CHARGED='green'
-POWERLEVEL9K_BATTERY_DISCONNECTED='$DEFAULT_COLOR'
-POWERLEVEL9K_BATTERY_LOW_THRESHOLD='15'
-POWERLEVEL9K_BATTERY_LOW_COLOR='red'
-POWERLEVEL9K_BATTERY_ICON='\uf1e6 '
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX='┌'
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='└── '
-#POWERLEVEL9K_VCS_GIT_ICON='\ue60a'
-
-#POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
-#POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
-POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
-POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind git-stash git-remotebranch git-tagname)
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status os_icon battery dir vcs dir_writable)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time background_jobs ram virtualenv anaconda)
-
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=4
-
-#POWERLEVEL9K_CUSTOM_TIME_FORMAT="%D{\uf017 %H:%M:%S}"
-POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
-
-POWERLEVEL9K_STATUS_VERBOSE=false
-
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -56,6 +25,9 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -93,14 +65,11 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-)
-
+plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -116,9 +85,6 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -127,40 +93,53 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(hg_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+
+# ZSH_THEME_HG_PROMPT_PREFIX="%{$fg_bold[magenta]%}hg:(%{$fg[red]%}"
+# ZSH_THEME_HG_PROMPT_SUFFIX="%{$reset_color%}"
+# ZSH_THEME_HG_PROMPT_DIRTY="%{$fg[magenta]%}) %{$fg[yellow]%}✗%{$reset_color%}"
+# ZSH_THEME_HG_PROMPT_CLEAN="%{$fg[magenta]%})"
+
 
 alias gac="git add .
 git commit -m $1"
 alias gp="git push origin master"
 
-sudo rmod nvdia
-sudo tee /proc/acpi/bbswitch <<< OFF
-"
-alias cts="cd Development/web3.js/"
+alias p3="ipython3"
 
-alias gon="sudo tee /proc/acpi/bbswitch <<< ON"
-alias aconda="source /opt/anaconda/bin/activate"
-alias dconda="source /opt/anaconda/bin/deactivate"
+alias cdm="cd ~/Development/moz/mozilla-central"
+alias run="./mach run"
+alias build="./mach build"
+alias bf="./mach build faster"
+alias clobber="./mach clobber"
+alias test="./mach xpcshell-test netwerk/dns/tests/unit/test_PublicSuffixList.js"
+alias emake="cd obj-x86_64-pc-linux-gnu/netwerk/dns
+make
+cdm"
 
-alias dotdrop="/home/arpit/dotfiles/dotdrop.sh --cfg=/home/arpit/dotfiles/config.yaml"
 
-# Import colorscheme from 'wal' asynchronously
-# &   # Run the process in the background.
-# ( ) # Hide shell job control messages.
-(cat ~/.cache/wal/sequences &)
+alias pytest="python3 /home/arpit/.local/lib/python3.6/site-packages/pytest.py"
+export USERNAME="arpit73"
+export PASSWORD="s3cr3t"
+export SERVER="https://kinto.dev.mozaws.net/v1"
+export COMMIT_HASH_URL="https://api.github.com/repos/publicsuffix/list/commits?path=public_suffix_list.dat"
+export LIST_URL="https://raw.githubusercontent.com/publicsuffix/list/master/public_suffix_list.dat"
+export MAKE_DAFSA_PY="https://raw.githubusercontent.com/arpit73/temp_dafsa_testing_repo/master/publishing/make_dafsa.py"
+export PREPARE_TLDS_PY="https://raw.githubusercontent.com/arpit73/temp_dafsa_testing_repo/master/publishing/prepare_tlds.py"
+export BUCKET_ID="dafsa-bucket"
+export COLLECTION_ID="public-suffix-list"
+export RECORD_ID="latest-commit-hash"
 
-# Alternative (blocks terminal for 0-3ms)
-cat ~/.cache/wal/sequences
+export PUBLISH_DAFSA_AUTH="a b"
 
-# To add support for TTYs this line can be optionally added.
-source ~/.cache/wal/colors-tty.sh
-
-# better yaourt colors
-export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
+# export API_URL="http://3.20.206.58:3000"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[[ -f /home/arpit/Development/xi-electron/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /home/arpit/Development/xi-electron/node_modules/tabtab/.completions/electron-forge.zsh
+export PATH="$HOME/.mozbuild/arcanist/bin:$HOME/.mozbuild/moz-phab:$PATH"
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
