@@ -1,145 +1,29 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export ZSH="/home/arpit/.oh-my-zsh"
 
-# Path to your oh-my-zsh installation.
-  export ZSH="/home/arpit/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+alias gac="git add . && git commit -m $1"
 
-# export MANPATH="/usr/local/man:$MANPATH"
+alias code="code-insiders"
+alias qll="/usr/bin/code"
+alias cdq="cd ~/Development/Quillhash/backend"
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+export PATH="$HOME/.rbenv/bin:$PATH"
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+eval "$(rbenv init -)"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-# PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(hg_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+export PRIMERO_SECRET_KEY_BASE=PRIMERO_SECRET_KEY_BASE
+export DEVISE_SECRET_KEY=DEVISE_SECRET_KEY
+export DEVISE_JWT_SECRET_KEY=DEVISE_JWT_SECRET_KEY
+# export PRIMERO_MESSAGE_SECRET=PRIMERO_MESSAGE_SECRET
 
-# ZSH_THEME_HG_PROMPT_PREFIX="%{$fg_bold[magenta]%}hg:(%{$fg[red]%}"
-# ZSH_THEME_HG_PROMPT_SUFFIX="%{$reset_color%}"
-# ZSH_THEME_HG_PROMPT_DIRTY="%{$fg[magenta]%}) %{$fg[yellow]%}✗%{$reset_color%}"
-# ZSH_THEME_HG_PROMPT_CLEAN="%{$fg[magenta]%})"
+# Make this is the last line
+source /home/arpit/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-
-alias gac="git add .
-git commit -m $1"
-alias gp="git push origin master"
-
-alias p3="ipython3"
-
-alias cdm="cd ~/Development/moz/mozilla-central"
-alias run="./mach run"
-alias build="./mach build"
-alias bf="./mach build faster"
-alias clobber="./mach clobber"
-alias test="./mach xpcshell-test netwerk/dns/tests/unit/test_PublicSuffixList.js"
-alias emake="cd obj-x86_64-pc-linux-gnu/netwerk/dns
-make
-cdm"
-
-
-alias pytest="python3 /home/arpit/.local/lib/python3.6/site-packages/pytest.py"
-export USERNAME="arpit73"
-export PASSWORD="s3cr3t"
-export SERVER="https://kinto.dev.mozaws.net/v1"
-export COMMIT_HASH_URL="https://api.github.com/repos/publicsuffix/list/commits?path=public_suffix_list.dat"
-export LIST_URL="https://raw.githubusercontent.com/publicsuffix/list/master/public_suffix_list.dat"
-export MAKE_DAFSA_PY="https://raw.githubusercontent.com/arpit73/temp_dafsa_testing_repo/master/publishing/make_dafsa.py"
-export PREPARE_TLDS_PY="https://raw.githubusercontent.com/arpit73/temp_dafsa_testing_repo/master/publishing/prepare_tlds.py"
-export BUCKET_ID="dafsa-bucket"
-export COLLECTION_ID="public-suffix-list"
-export RECORD_ID="latest-commit-hash"
-
-export PUBLISH_DAFSA_AUTH="a b"
-
-# export API_URL="http://3.20.206.58:3000"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export PATH="$HOME/.mozbuild/arcanist/bin:$HOME/.mozbuild/moz-phab:$PATH"
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
